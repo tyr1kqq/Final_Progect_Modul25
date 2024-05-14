@@ -12,5 +12,7 @@ namespace Final_Progect_Modul25.database_classes
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+
+        public List<User> Users { get; set; } = new List<User>();
     }
 }

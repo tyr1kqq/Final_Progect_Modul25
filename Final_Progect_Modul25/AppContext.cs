@@ -1,5 +1,6 @@
 ﻿using Final_Progect_Modul25.database_classes;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +17,9 @@ namespace EntityFrame
         public DbSet<Book> Books { get; set; }
         public DateTime CreateDate { get; set; }
 
-        public AppContext()
+        public AppContext() 
         {
+            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
